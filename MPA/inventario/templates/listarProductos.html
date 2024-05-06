@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+<title>Listar Productos</title>
+{% endblock extrahead%}
+
+{% block content %}
+
+<div class="container">
+    <div class="row mb-3 mt-3">
+        <div class="col">
+            <a type="button" class="btn btn-success" style=" width: 150px" href="{% url 'sumarStock' %}">Agregar</a>
+            <a type="button" class="btn btn-outline-success text-dark" style=" width: 150px" href="{% url 'restarStock' %}">Retirar</a>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12 mx-auto">
+            <div class="table-responsive text-center">
+                <table class="table table-bordered">
+                    <thead class="table-success border border-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Presentación</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table border border-dark">
+                        {% for producto in productos %}
+                        <tr>
+                            <td>{{ producto.id }}</td>
+                            <td>{{ producto.nombre }}</td>
+                            <td>{{ producto.presentacion }}</td>
+                            <td>{{ producto.cantidad }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content%}

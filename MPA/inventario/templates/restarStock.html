@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+<title>Restar Stock</title>
+{% endblock extrahead%}
+
+
+{% block content %}
+
+<h1 class="title mb-3 mt-3">Retirar Stock</h1>
+
+<div>
+    {% if error_message %}
+    <div class="alert alert-danger" role="alert">
+        {{ error_message }}
+    </div>
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table">
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Retirar" class="btn btn-outline-success text-dark" style="width: 100%;">
+    </form>
+</div>
+
+{% endblock content%}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %} 
+<title>Sumar Stock</title>
+{% endblock extrahead%}
+
+{% block content %} 
+
+<h1  class="title mb-3 mt-3">Agregar Stock</h1>
+
+<div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table">
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Guardar" class="btn btn-success" style="width: 100%;">
+    </form>
+</div>
+
+{% endblock content%}

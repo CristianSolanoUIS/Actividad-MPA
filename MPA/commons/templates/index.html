@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+<title>Bodegón</title>
+{% endblock extrahead %}
+
+{% block content %}
+<title>Página Principal</title>
+<h1 class="display-2 text-center" id="title">Mini-Market JECUI</h1>
+<img src="{% static '/img/index/Logo.jpeg' %}" class="img-fluid rounded mx-auto d-block" id="img_index" alt="Error cargando Imagen">
+<figure class="text-center">
+    <blockquote class="blockquote">
+      <p class="text_responsive">Bienvenido al centro neurálgico de nuestra operación. Esta plataforma está diseñada para simplificar la gestión de productos en nuestra bodega. Desde aquí, los administrativos podrán supervisar y controlar todo el flujo de productos: desde la recepción hasta la distribución. Optimiza tus procesos, gestiona inventarios, y mantén un control preciso sobre cada artículo almacenado. ¡Bienvenido al futuro de la gestión de bodegas!</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Equipo Jecui</cite>
+    </figcaption>
+</figure>
+{% endblock content %}
