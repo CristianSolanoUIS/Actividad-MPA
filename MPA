@@ -1,0 +1,7 @@
+git init
+
+git add MPA
+
+git commit -m "Agregando carpeta de la aplicación"
+
+git push -u origin master
